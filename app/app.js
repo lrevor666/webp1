@@ -1,5 +1,9 @@
 require('../less/app.less');
 
+let img = require('../images/da.png');
+
+console.log('img==>',img);
+
 window.onload = function(){
 
     let person = ['kevin','mark','iven'];
@@ -15,5 +19,17 @@ window.onload = function(){
     });
 
     document.body.appendChild(ul);
+
+    let image = new Image();
+
+    image.src = img;
+
+    // if(/^data:image\/.[A-Za-z]+;base64/.test(img)){
+        
+    // }else{
+    //     image.src = img;
+    // }
+
+    document.getElementById('icon').appendChild(image);
 
 }
